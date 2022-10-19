@@ -9,17 +9,8 @@ import SwiftUI
 
 struct MainTrafficLightView: View {
     
-    @State private var redOpacity = Status.colorIsOff.rawValue
-    @State private var yellowOpacity = Status.colorIsOff.rawValue
-    @State private var greenOpacity = Status.colorIsOff.rawValue
-    
     @State private var countTappedButton = 0
-    
-    enum Status: Double {
-    case colorIsOn = 1
-    case colorIsOff = 0.3
-    }
-    
+
     var body: some View {
         VStack {
             ZStack {
@@ -30,33 +21,23 @@ struct MainTrafficLightView: View {
                     .shadow(color: .black, radius: 10, x: 10, y: 10)
                     .padding()
                 VStack {
-                    ColorCircleView(image: "1", opacity: redOpacity)
-                    ColorCircleView(image: "2", opacity: yellowOpacity)
-                    ColorCircleView(image: "3", opacity: greenOpacity)
+                    ColorCircleView(color: countTappedButton == 1 ? .red : .white)
+                    ColorCircleView(color: countTappedButton == 2 ? .yellow : .white)
+                    ColorCircleView(color: countTappedButton == 3 ? .green : .white)
                 }
             }
             Spacer()
             
-            Button("START", action: {
+            TrafficButtonAction {
                 switch countTappedButton {
-                case 0:
-                    greenOpacity = Status.colorIsOff.rawValue
-                    redOpacity = Status.colorIsOn.rawValue
-                    countTappedButton += 1
                 case 1:
-                    redOpacity = Status.colorIsOff.rawValue
-                    yellowOpacity = Status.colorIsOn.rawValue
+                    countTappedButton += 1
+                case 2:
                     countTappedButton += 1
                 default:
-                    yellowOpacity = Status.colorIsOff.rawValue
-                    greenOpacity = Status.colorIsOn.rawValue
-                    countTappedButton = 0
+                    countTappedButton = 1
                 }
-            })
-            .frame(width: 100, height: 100)
-            .foregroundColor(.red)
-            .font(.system(size: 25, weight: .bold, design: .serif))
-            .padding()
+            }
         }
     }
 }
