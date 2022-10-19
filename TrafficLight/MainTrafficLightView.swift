@@ -37,7 +37,7 @@ struct MainTrafficLightView: View {
             }
             Spacer()
             
-            Button("START", action: {
+            TrafficButtonActivate {
                 switch countTappedButton {
                 case 0:
                     greenOpacity = Status.colorIsOff.rawValue
@@ -52,14 +52,11 @@ struct MainTrafficLightView: View {
                     greenOpacity = Status.colorIsOn.rawValue
                     countTappedButton = 0
                 }
-            })
-            .frame(width: 100, height: 100)
-            .foregroundColor(.red)
-            .font(.system(size: 25, weight: .bold, design: .serif))
-            .padding()
+            }
         }
     }
 }
+                               
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

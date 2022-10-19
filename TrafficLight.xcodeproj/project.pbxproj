@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		874A3DA12900530200918646 /* TrafficButtonActivate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874A3DA02900530200918646 /* TrafficButtonActivate.swift */; };
 		87657A9329000324008B66E8 /* TrafficLightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87657A9229000324008B66E8 /* TrafficLightApp.swift */; };
 		87657A9529000324008B66E8 /* MainTrafficLightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87657A9429000324008B66E8 /* MainTrafficLightView.swift */; };
 		87657A9729000325008B66E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87657A9629000325008B66E8 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		874A3DA02900530200918646 /* TrafficButtonActivate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficButtonActivate.swift; sourceTree = "<group>"; };
 		87657A8F29000324008B66E8 /* TrafficLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrafficLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87657A9229000324008B66E8 /* TrafficLightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightApp.swift; sourceTree = "<group>"; };
 		87657A9429000324008B66E8 /* MainTrafficLightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTrafficLightView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			children = (
 				87657A9229000324008B66E8 /* TrafficLightApp.swift */,
 				87657A9429000324008B66E8 /* MainTrafficLightView.swift */,
+				874A3DA02900530200918646 /* TrafficButtonActivate.swift */,
 				87657AA029000337008B66E8 /* ColorCircleView.swift */,
 				87657A9629000325008B66E8 /* Assets.xcassets */,
 				87657A9829000325008B66E8 /* Preview Content */,
@@ -142,6 +145,7 @@
 			files = (
 				87657AA129000337008B66E8 /* ColorCircleView.swift in Sources */,
 				87657A9529000324008B66E8 /* MainTrafficLightView.swift in Sources */,
+				874A3DA12900530200918646 /* TrafficButtonActivate.swift in Sources */,
 				87657A9329000324008B66E8 /* TrafficLightApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
