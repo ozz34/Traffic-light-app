@@ -10,9 +10,10 @@ import SwiftUI
 struct TrafficButtonActivate: View {
     
     let action : () -> ()
+    let title: String
     
     var body: some View {
-        Button("START", action: action)
+        Button(title, action: action)
         .frame(width: 100, height: 100)
         .foregroundColor(.red)
         .font(.system(size: 25, weight: .bold, design: .serif))
@@ -22,7 +23,7 @@ struct TrafficButtonActivate: View {
 
 struct TrafficButtonActivate_Previews: PreviewProvider {
     static var previews: some View {
-        TrafficButtonActivate(action: {})
+        TrafficButtonActivate(action: {}, title: "Старт")
     }
 }
 

@@ -13,6 +13,8 @@ struct MainTrafficLightView: View {
     @State private var yellowOpacity = Status.colorIsOff.rawValue
     @State private var greenOpacity = Status.colorIsOff.rawValue
     
+    @State var buttonTitle = "Start"
+    
     @State private var countTappedButton = 0
     
     enum Status: Double {
@@ -37,7 +39,7 @@ struct MainTrafficLightView: View {
             }
             Spacer()
             
-            TrafficButtonActivate {
+            TrafficButtonActivate(action: {
                 switch countTappedButton {
                 case 0:
                     greenOpacity = Status.colorIsOff.rawValue
@@ -52,7 +54,29 @@ struct MainTrafficLightView: View {
                     greenOpacity = Status.colorIsOn.rawValue
                     countTappedButton = 0
                 }
-            }
+                
+                if buttonTitle == "Start" {
+                    buttonTitle = "Next"
+                }
+            }, title: buttonTitle
+    )
+//
+//            TrafficButtonActivate {
+//                switch countTappedButton {
+//                case 0:
+//                    greenOpacity = Status.colorIsOff.rawValue
+//                    redOpacity = Status.colorIsOn.rawValue
+//                    countTappedButton += 1
+//                case 1:
+//                    redOpacity = Status.colorIsOff.rawValue
+//                    yellowOpacity = Status.colorIsOn.rawValue
+//                    countTappedButton += 1
+//                default:
+//                    yellowOpacity = Status.colorIsOff.rawValue
+//                    greenOpacity = Status.colorIsOn.rawValue
+//                    countTappedButton = 0
+//                }
+//            };, title: "Next")
         }
     }
 }
