@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct MainTrafficLightView: View {
+   
+    @State var buttonTitle = "Start"
     
     @State private var redOpacity = Status.colorIsOff.rawValue
     @State private var yellowOpacity = Status.colorIsOff.rawValue
     @State private var greenOpacity = Status.colorIsOff.rawValue
-    
-    @State var buttonTitle = "Start"
-    
     @State private var countTappedButton = 0
     
     enum Status: Double {
@@ -59,28 +58,10 @@ struct MainTrafficLightView: View {
                     buttonTitle = "Next"
                 }
             }, title: buttonTitle
-    )
-//
-//            TrafficButtonActivate {
-//                switch countTappedButton {
-//                case 0:
-//                    greenOpacity = Status.colorIsOff.rawValue
-//                    redOpacity = Status.colorIsOn.rawValue
-//                    countTappedButton += 1
-//                case 1:
-//                    redOpacity = Status.colorIsOff.rawValue
-//                    yellowOpacity = Status.colorIsOn.rawValue
-//                    countTappedButton += 1
-//                default:
-//                    yellowOpacity = Status.colorIsOff.rawValue
-//                    greenOpacity = Status.colorIsOn.rawValue
-//                    countTappedButton = 0
-//                }
-//            };, title: "Next")
+            )
         }
     }
 }
-                               
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

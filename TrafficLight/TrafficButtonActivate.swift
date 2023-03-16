@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct TrafficButtonActivate: View {
-    
     let action : () -> ()
     let title: String
     
@@ -26,4 +25,3 @@ struct TrafficButtonActivate_Previews: PreviewProvider {
         TrafficButtonActivate(action: {}, title: "Старт")
     }
 }
-
